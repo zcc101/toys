@@ -96,7 +96,7 @@ def parse_sound_page(sound_id):
 
 def parse_album_page(album_id):
     """
-    解析专辑页面，获取第一页（专辑可能有多叶）的音频url
+    解析专辑页面，获取第一页（专辑可能有多页）的音频url
     """
     album_api = f'{base_url}revision/album/v1/getTracksList?albumId={album_id}&pageNum=1&sort=0'
     r = requests.get(album_api, headers=headers)
